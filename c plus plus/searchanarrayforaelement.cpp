@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int searcharr(int arr[],int size,int element)
+{
+    for(int i=0;i<size;i++)
+    {
+        if(arr[i]==element)
+        {
+              return i;
+        }
+
+    }
+    return -1;
+}
+int main()
+{
+    int arr[]={1,2,3,4,5,6,7,8,9},size,num,index;
+    size=sizeof(arr)/sizeof(arr[0]);
+    cin>>num;
+    index=searcharr(arr,size,num);
+    if(index!= -1)
+    {
+        cout<<"the index is="<<index;
+    }
+    else
+    {
+        cout<<"index not found";
+    }
+    return 0;
+}
